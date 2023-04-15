@@ -1,21 +1,15 @@
-.img-filter{
-    filter: brightness(120%) saturate(120%);
+
+.color-font-prymary{
+  color: hsl(162, 100%, 40%);
 }
 
-.image-container {
-    position: relative;
-  }
-  
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-  }
+
+
+
+#term.p {
+  text-align: justify;
+}
+
+#term.li{
+  text-align: justify;
+}

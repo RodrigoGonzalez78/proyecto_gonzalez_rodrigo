@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="es">
+
+<!-- data-bs-theme="dark" -->
+<html lang="es" >
 
 <head>
 
@@ -9,10 +11,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!--Bootstrap -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" integrity="" crossorigin="">
+    <link href="<?php echo base_url("assets/css/bootstrap.min.css") ?>" rel="stylesheet" integrity="" crossorigin="">
 
     <!-- CSS -->
-    <link href="assets/css/style.css" rel="stylesheet" integrity="" crossorigin="">
+    <link href="<?php echo base_url("assets/css/style.css") ?>" rel="stylesheet" integrity="" crossorigin="">
 
     <!-- Flavicon -->
 
