@@ -17,6 +17,7 @@
     <link href="<?php echo base_url("assets/css/style.css") ?>" rel="stylesheet" integrity="" crossorigin="">
 
     <!-- Flavicon -->
+    <link rel="shortcut icon" href="assets/img/icons/logo.ico" type="image/x-icon">
 
     <!-- Titulo -->
     <title><?php echo($titulo); ?></title>
