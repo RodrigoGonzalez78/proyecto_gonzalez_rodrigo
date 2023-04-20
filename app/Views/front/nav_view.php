@@ -1,5 +1,5 @@
 <body>
-    <script src="assets/js/bootstrap.bundle.min.js" integrity="" crossorigin=""></script>
+
     <!-- Barra de navegacion -->
     <nav class="navbar navbar-expand-md  bg-dark" data-bs-theme="dark">
         <div class="container-fluid">
@@ -13,13 +13,13 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
                     <li class="nav-item m-1">
                         <a class="my-navbar-link" aria-current="page" href="<?php echo base_url("/") ?>">Inicio</a>
                     </li>
                     <li class="nav-item m-1">
                         <a class="my-navbar-link" aria-current="page" href="<?php echo base_url("/comercialization") ?>">Productos</a>
                     </li>
-
 
                     <li class="nav-item m-1">
                         <a class="my-navbar-link" aria-current="page" href="<?php echo base_url("/contact") ?>">Contacto</a>
@@ -35,7 +35,6 @@
                         <button type="button" class="btn my-btn-primary  fw-bold">Sign-up</button>
                     </li>
                 </ul>
-
 
 
             </div>

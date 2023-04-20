@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-
-<!-- data-bs-theme="dark" -->
 <html lang="es" >
 
 <head>
@@ -13,6 +11,9 @@
     <!--Bootstrap -->
     <link href="<?php echo base_url("assets/css/bootstrap.min.css") ?>" rel="stylesheet" integrity="" crossorigin="">
 
+    <!-- Scripts -->
+    <script src="assets/js/bootstrap.bundle.min.js" integrity="" crossorigin=""></script>
+    
     <!-- CSS -->
     <link href="<?php echo base_url("assets/css/style.css") ?>" rel="stylesheet" integrity="" crossorigin="">
 

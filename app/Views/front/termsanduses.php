@@ -1,4 +1,4 @@
-<div id="term" class="container-fluid py-4 px-4 my-text-color-secundary" >
+<div id="terminos" class="container-fluid py-4 px-4 my-text-color-secundary" >
      <h1>Términos y condiciones</h1>
 
     <h2>1. Aceptación de los términos</h2>

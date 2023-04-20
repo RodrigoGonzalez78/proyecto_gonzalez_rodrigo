@@ -2,35 +2,23 @@
 
   <div class="row  p-3">
 
-
-    
     <div class="col-md-4">
-      <div class="card">
-        <img class="card-img-top" src="https://picsum.photos/id/237/200/200" alt="Card image cap" />
+      <div class="card h-90 text-center">
+        <img src="https://picsum.photos/id/237/200/200" class="card-img-top" alt="Imagen del producto">
         <div class="card-body">
-          <h4 class="card-title">Título de la Card</h4>
-          <p class="card-text">
-            Descripción breve de la card. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-          <a href="#" class="btn btn-primary">Ver más</a>
+          <h5 class="card-title">Título del producto</h5>
+          <p class="card-text">Descripción del producto</p>
+          <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text">Cantidad</span>
+            <input type="number w-50" class="form-control form-control-sm" value="1">
+          </div>
+          <button type="button" class="btn my-btn-primary">Agregar al carrito</button>
         </div>
       </div>
     </div>
 
-    <div class="col-md-4">
-      <div class="card">
-        <img class="card-img-top" src="https://picsum.photos/id/237/200/200" alt="Card image cap" />
-        <div class="card-body">
-          <h4 class="card-title">Título de la Card</h4>
-          <p class="card-text">
-            Descripción breve de la card. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-          <a href="#" class="btn btn-primary">Ver más</a>
-        </div>
-      </div>
-    </div>
+  
 
-    
-    
+
   </div>
 </div>

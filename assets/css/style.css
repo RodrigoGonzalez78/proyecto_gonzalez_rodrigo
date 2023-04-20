@@ -7,12 +7,19 @@
   --color-secundario2: hsl(228, 15%, 15%);
 }
 
+
 .my-text-color{
   color: var(--color-primario);
 }
+
 .my-text-color-secundary{
-  color: var(--color-secundario1);
+  color: var(--color-secundario);
 }
+
+.my-background{
+  background-color: var(--color-secundario2);
+}
+
 
 /* Modifico el navbar-link de bootraps */
 .my-navbar-link{
@@ -62,12 +69,15 @@
 
 /* Terminos y usos */
 
-#term.p {
-  color: white!important;
-  text-align: justify;
+#terminos p {
+  text-align: justify!important;
+  
 }
 
-#term.li{
-  color: white!important;
+#terminos li{
+  text-align: justify!important;
+}
+
+#about p{
   text-align: justify;
 }
