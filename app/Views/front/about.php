@@ -15,11 +15,17 @@
 
   <div class="row featurette my-5">
     <div class="col-md-7 order-md-2">
-      <h2 class="featurette-heading fw-bold lh-1">Oh yeah, it’s that good. <span class="fw-bold my-text-color">See for yourself.</span></h2>
-      <p class="lead">En nuestra empresa, contamos con un equipo de expertos en hardware, tecnología y atención al cliente. Todos nuestros empleados están altamente capacitados y tienen un profundo conocimiento del mundo de la informática y la tecnología. Nos enorgullecemos de trabajar juntos para ofrecer a nuestros clientes los mejores productos y servicios.</p>
+      <h2 class="featurette-heading fw-bold lh-1">Sobre el equipo. <span class="fw-bold my-text-color">Siempre con usted.</span></h2>
+      <p class="lead">En MountainTech, nuestro equipo está compuesto por expertos en hardware y tecnología. Todos ellos comparten nuestra pasión por los componentes de calidad y la satisfacción del cliente.
+
+        Nuestro equipo de atención al cliente está disponible para responder a cualquier pregunta y ayudar a nuestros clientes a encontrar los productos adecuados para sus necesidades. Además, nuestro equipo de soporte técnico está listo para brindar asistencia en caso de cualquier problema con los productos de MountainTech.
+
+        En resumen, en MountainTech nos enorgullece contar con un equipo apasionado y dedicado que trabaja arduamente para proporcionar la mejor experiencia de compra posible para nuestros clientes.
+
+      </p>
     </div>
     <div class="col-md-5 order-md-1">
-    <img class="img-fluid mx-auto" src="assets/img/team.svg" height="500" width="500">
+      <img class="img-fluid mx-auto" src="assets/img/team.svg" height="500" width="500">
     </div>
   </div>
 
@@ -27,14 +33,16 @@
 
   <div class="row featurette my-5">
     <div class="col-md-7">
-      <h2 class="featurette-heading fw-bold lh-1">And lastly, this one. <span class=" my-text-color ">Checkmate.</span></h2>
-      <p class=" lead text-justify">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+      <h2 class="featurette-heading fw-bold lh-1">Trayectoria. <span class=" my-text-color ">Y una gran historia.</span></h2>
+      <p class=" lead text-justify">MountainTech fue fundada en el año 2005 por un grupo de amigos apasionados por la tecnología y los videojuegos. Lo que comenzó como un pequeño proyecto en el sótano de uno de ellos, se convirtió en una empresa próspera con una amplia variedad de componentes de hardware disponibles en su catálogo.
+
+En la actualidad, MountainTech cuenta con una amplia base de clientes leales y satisfechos, y se ha expandido para servir a clientes en todo el mundo.</p>
     </div>
-    <div class="col-md-5">
-      <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
-        <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
-      </svg>
+
+    <div class="col-md-5 order-md-1">
+      <img class="img-fluid mx-auto" src="assets/img/route.svg" height="500" width="500">
     </div>
+
   </div>
 
 </div>

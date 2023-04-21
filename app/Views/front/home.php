@@ -12,7 +12,7 @@
 			<div class="carousel-item active">
 				<img src="assets/img/pc.png" class="d-block w-100 my-opacity-bg" height="500px" alt="Slide 1">
 				<div class="carousel-caption top-0 mt-4">
-					<p class="mt-2 fs-3 text-uppercase">Con distribuidores ofiales del mercado</p>
+					<p class="mt-5 fs-3 text-uppercase">Con distribuidores ofiales del mercado</p>
 					<h1 class="display-1 fw-bolder">Hardware de calidad</h1>
 					<button class="btn my-btn-primary px-4 py-2 fs-5 mt-2 fw-bold">Comprar</button>
 				</div>
@@ -23,7 +23,7 @@
 				<div class="carousel-caption top-0 mt-4  ">
 
 
-					<p class="text-uppercase fs-3 mt-2">Tu compra siempre esta asegurada</p>
+					<p class="text-uppercase fs-3 mt-5">Tu compra siempre esta asegurada</p>
 					<p class="display-1 fw-bolder ">Grantias Oficiales</p>
 					<button class="btn my-btn-primary px-4 py-2 fs-5 mt-2 fw-bold" data-bs-toggle="modal" data-bs-target="#booking-modal">Comprar</button>
 				</div>
@@ -33,7 +33,7 @@
 			<div class="carousel-item">
 				<img src="assets/img/pc3.png" class="d-block w-100" height="500px" alt="Slide 3">
 				<div class="carousel-caption top-0 mt-4">
-					<p class="text-uppercase fs-3 mt-2">Apoyo al cliente ante cualquier situación</p>
+					<p class="text-uppercase fs-3 mt-5">Apoyo al cliente ante cualquier situación</p>
 					<p class="display-1 fw-bolder">Atencion 24/7</p>
 					<button class="btn my-btn-primary px-4 py-2 fs-5 mt-2 fw-bold" data-bs-toggle="modal" data-bs-target="#booking-modal">Comprar</button>
 				</div>
@@ -56,16 +56,56 @@
 <section>
 	<div class="container py-4">
 		<div class="row featurette my-3">
-			<div class="col-md-7">
-				<h2 class="featurette-heading fw-bold lh-1">Bienvenido. <span class=" my-text-color">¿Que hacemos?</span></h2>
+			<div class="col-lg-7 col-md-12">
+				<h2 class="fw-bold lh-1">¡Bienvenido a Mountain<span class=" my-text-color">Tech</span>!</h2>
 				<p class="lead text-justify">
-					¡Bienvenido a Mountain Tech! Somos una empresa dedicada a la venta de componentes de PC de alta calidad. Si eres un entusiasta de la tecnología o un profesional en busca de soluciones de hardware de vanguardia, has llegado al lugar adecuado.
+					Somos una empresa dedicada a la venta de componentes de PC de alta calidad. Si eres un entusiasta de la tecnología o un profesional en busca de soluciones de hardware de vanguardia, has llegado al lugar adecuado.
 					En Mountain Tech, ofrecemos una amplia gama de componentes de PC, desde procesadores y tarjetas gráficas hasta discos duros y placas base. Todos nuestros productos son cuidadosamente seleccionados de los mejores fabricantes del mercado, garantizando la máxima calidad y rendimiento.</p>
 			</div>
-			<div class="col-md-5">
+			<div class="col-lg-5 col-md-12">
 				<img class="img-fluid mx-auto" src="assets/img/client.svg" height="500" width="500">
 			</div>
 		</div>
 	</div>
 
+</section>
+
+
+<section>
+
+	<div class="container">
+		<h2 class="fw-bold lh-1">Algunas opniones:</h2>
+		<div class="row">
+
+			<div class="p-1 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+				<div class="card cold-4">
+					<div class="card-body">
+						<h5 class="card-title">Reseña 1</h5>
+						<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<p class="card-text"><small class="text-muted">Usuario 1</small></p>
+					</div>
+				</div>
+			</div>
+			<div class="p-1 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+				<div class="card cold-4">
+					<div class="card-body">
+						<h5 class="card-title">Reseña 1</h5>
+						<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<p class="card-text"><small class="text-muted">Usuario 1</small></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="p-1 col-lg-4 col-md-4 col-sm-6 col-xs-12">
+				<div class="card cold-4">
+					<div class="card-body">
+						<h5 class="card-title">Reseña 1</h5>
+						<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+						<p class="card-text"><small class="text-muted">Usuario 1</small></p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
 </section>
