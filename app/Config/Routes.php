@@ -32,9 +32,10 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 $routes->get('/contact', 'Home::contact');
 $routes->get('/about', 'Home::about');
-$routes->get('/comercialization', 'Home::comercialization');
+$routes->get('/products', 'Home::products');
 $routes->get('/termsanduses', 'Home::termsanduses');
-
+$routes->get('/login', 'Home::login');
+$routes->get('/signup', 'Home::signup');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

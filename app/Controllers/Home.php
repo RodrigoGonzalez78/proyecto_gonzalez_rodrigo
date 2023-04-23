@@ -34,13 +34,13 @@ class Home extends BaseController
         echo view('front/footer_view');
     }
 
-    public function comercialization()
+    public function products()
     {
 
-        $data['titulo'] = 'Comercialisacion';
+        $data['titulo'] = 'Productos';
         echo view('front/head_view', $data);
         echo view('front/nav_view');
-        echo view('front/comercialization');
+        echo view('front/products');
         echo view('front/footer_view');
     }
 
@@ -51,6 +51,24 @@ class Home extends BaseController
         echo view('front/head_view', $data);
         echo view('front/nav_view');
         echo view('front/termsanduses');
+        echo view('front/footer_view');
+    }
+    public function login()
+    {
+
+        $data['titulo'] = 'Login';
+        echo view('front/head_view', $data);
+        echo view('front/nav_view');
+        echo view('front/login');
+        echo view('front/footer_view');
+    }
+    public function signup()
+    {
+
+        $data['titulo'] = 'Sign-Up';
+        echo view('front/head_view', $data);
+        echo view('front/nav_view');
+        echo view('front/sign_up');
         echo view('front/footer_view');
     }
 }

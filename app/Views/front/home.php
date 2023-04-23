@@ -1,4 +1,4 @@
-<!-- Carusel -->
+<!--Seccion del Carusel -->
 <section>
 	<div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
 		<div class="carousel-indicators">
@@ -10,32 +10,32 @@
 		<div class="carousel-inner">
 
 			<div class="carousel-item active">
-				<img src="assets/img/pc.png" class="d-block w-100 my-opacity-bg" height="500px" alt="Slide 1">
-				<div class="carousel-caption top-0 mt-4">
-					<p class="mt-5 fs-3 text-uppercase">Con distribuidores ofiales del mercado</p>
+				<img src="assets/img/pc.png" class="d-block w-100 img-ilumination" height="500px" alt="Slide 1">
+				<div class="carousel-caption top-0 mt-5">
+					<p class="mt-5 fs-3 text-uppercase fw-bolder my-text-color">Con distribuidores oficiales del mercado</p>
 					<h1 class="display-1 fw-bolder">Hardware de calidad</h1>
-					<button class="btn my-btn-primary px-4 py-2 fs-5 mt-2 fw-bold">Comprar</button>
+				
 				</div>
 			</div>
 
 			<div class="carousel-item">
-				<img src="assets/img/pc2.png" class="d-block w-100" height="500px" alt="Slide 2">
-				<div class="carousel-caption top-0 mt-4  ">
+				<img src="assets/img/pc2.png" class="d-block w-100 img-ilumination" height="500px" alt="Slide 2">
+				<div class="carousel-caption top-0 mt-5  ">
 
 
-					<p class="text-uppercase fs-3 mt-5">Tu compra siempre esta asegurada</p>
-					<p class="display-1 fw-bolder ">Grantias Oficiales</p>
-					<button class="btn my-btn-primary px-4 py-2 fs-5 mt-2 fw-bold" data-bs-toggle="modal" data-bs-target="#booking-modal">Comprar</button>
+					<p class="text-uppercase fs-3 mt-5 fw-bolder my-text-color">Tu compra siempre esta asegurada</p>
+					<p class="display-1 fw-bolder">Garantias Oficiales</p>
+					
 				</div>
 			</div>
 
 
 			<div class="carousel-item">
-				<img src="assets/img/pc3.png" class="d-block w-100" height="500px" alt="Slide 3">
-				<div class="carousel-caption top-0 mt-4">
-					<p class="text-uppercase fs-3 mt-5">Apoyo al cliente ante cualquier situación</p>
-					<p class="display-1 fw-bolder">Atencion 24/7</p>
-					<button class="btn my-btn-primary px-4 py-2 fs-5 mt-2 fw-bold" data-bs-toggle="modal" data-bs-target="#booking-modal">Comprar</button>
+				<img src="assets/img/pc3.png" class="d-block w-100 img-ilumination" height="500px" alt="Slide 3">
+				<div class="carousel-caption top-0 mt-5">
+					<p class="text-uppercase fs-3 mt-5 fw-bolder my-text-color">Apoyo al cliente ante cualquier situación</p>
+					<p class="display-1 fw-bolder ">Atención 24/7</p>
+					
 				</div>
 			</div>
 
@@ -53,6 +53,7 @@
 	</div>
 </section>
 
+<!-- Seccion de introduccion -->
 <section>
 	<div class="container py-4">
 		<div class="row featurette my-3">
@@ -70,38 +71,35 @@
 
 </section>
 
-
+<!-- Seccion de reseñas -->
 <section>
 
 	<div class="container">
-		<h2 class="fw-bold lh-1">Algunas opniones:</h2>
+		<h2 class="fw-bold lh-1">Reseñas:</h2>
 		<div class="row">
 
 			<div class="p-1 col-lg-4 col-md-4 col-sm-6 col-xs-12">
-				<div class="card cold-4">
+				<div class="card cold-4 h-100">
 					<div class="card-body">
-						<h5 class="card-title">Reseña 1</h5>
-						<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-						<p class="card-text"><small class="text-muted">Usuario 1</small></p>
+						<p class="card-text">El proceso de compra fue muy sencillo. Compré un disco duro y me llegó en menos de una semana.</p>
+						<p class="card-text"><small class="text-muted">CarlaGarcia</small></p>
 					</div>
 				</div>
 			</div>
 			<div class="p-1 col-lg-4 col-md-4 col-sm-6 col-xs-12">
-				<div class="card cold-4">
+				<div class="card cold-4 h-100">
 					<div class="card-body">
-						<h5 class="card-title">Reseña 1</h5>
-						<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-						<p class="card-text"><small class="text-muted">Usuario 1</small></p>
+						<p class="card-text">Compré una memoria RAM y un ventilador y me llegaron en perfecto estado, me gustó mucho la variedad de productos que ofrecen.</p>
+						<p class="card-text"><small class="text-muted"> AlexMartinez</small></p>
 					</div>
 				</div>
 			</div>
 
 			<div class="p-1 col-lg-4 col-md-4 col-sm-6 col-xs-12">
-				<div class="card cold-4">
+				<div class="card cold-4 h-100 ">
 					<div class="card-body">
-						<h5 class="card-title">Reseña 1</h5>
-						<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-						<p class="card-text"><small class="text-muted">Usuario 1</small></p>
+						<p class="card-text">El servicio al cliente fue impecable, respondieron todas mis preguntas de manera clara y amable.</p>
+						<p class="card-text"><small class="text-muted">JuanPerez</small></p>
 					</div>
 				</div>
 			</div>

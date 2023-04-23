@@ -1,7 +1,7 @@
 <body>
 
     <!-- Barra de navegacion -->
-    <nav class="navbar navbar-expand-md  bg-dark" data-bs-theme="dark">
+    <nav class="navbar  navbar-expand-md  bg-dark" data-bs-theme="dark">
         <div class="container-fluid">
             <a class="navbar-brand fw-bold" href="<?php echo base_url("/") ?>">
                 <img class="mx-1 mb-1" src="assets/img/icons/logo.png" alt="" width="25" height="25">
@@ -18,7 +18,7 @@
                         <a class="my-navbar-link" aria-current="page" href="<?php echo base_url("/") ?>">Inicio</a>
                     </li>
                     <li class="nav-item m-1">
-                        <a class="my-navbar-link" aria-current="page" href="<?php echo base_url("/comercialization") ?>">Productos</a>
+                        <a class="my-navbar-link" aria-current="page" href="<?php echo base_url("/products") ?>">Productos</a>
                     </li>
 
                     <li class="nav-item m-1">
@@ -28,11 +28,12 @@
                         <a class="my-navbar-link" aria-current="page" href="<?php echo base_url("/about") ?>">About</a>
                     </li>
                     <li class="nav-item m-1">
-                        <button type="button" class="btn my-btn-outline-primary  fw-bold">Login</button>
+                        <a href="<?php echo base_url("/login") ?>"><button type="button" class="btn my-btn-outline-primary  fw-bold">Login</button></a>
+                        
                     </li>
 
                     <li class="nav-item  m-1">
-                        <button type="button" class="btn my-btn-primary  fw-bold">Sign-up</button>
+                        <a href="<?php echo base_url("/signup") ?>"><button type="button" class="btn my-btn-primary  fw-bold"  >Sign-up</button></a>
                     </li>
                 </ul>
 

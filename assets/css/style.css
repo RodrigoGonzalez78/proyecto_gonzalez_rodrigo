@@ -7,7 +7,9 @@
   --color-secundario2: hsl(228, 15%, 15%);
 }
 
-
+.img-ilumination{
+  filter: brightness(0.45);
+}
 .my-text-color{
   color: var(--color-primario);
 }
@@ -78,6 +80,8 @@
   text-align: justify!important;
 }
 
+/* About */
 #about p{
   text-align: justify;
 }
+
