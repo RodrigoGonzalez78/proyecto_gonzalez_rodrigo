@@ -1,3 +1,11 @@
+<?php if (session()->getFlashdata('success')) {
+	echo "
+      <div class='mt-3 mb-3 ms-3 me-3 h4 text-center alert alert-success alert-dismissible'>
+      <button type='button' class='btn-close' data-bs-dismiss='alert'></button>" . session()->getFlashdata('success') . "
+  </div>";
+} ?>
+
+
 <!--Seccion del Carusel -->
 <section>
 	<div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
@@ -14,7 +22,7 @@
 				<div class="carousel-caption top-0 mt-5">
 					<p class="mt-5 fs-3 text-uppercase fw-bolder my-text-color">Con distribuidores oficiales del mercado</p>
 					<h1 class="display-1 fw-bolder">Hardware de calidad</h1>
-				
+
 				</div>
 			</div>
 
@@ -25,7 +33,7 @@
 
 					<p class="text-uppercase fs-3 mt-5 fw-bolder my-text-color">Tu compra siempre esta asegurada</p>
 					<p class="display-1 fw-bolder">Garantias Oficiales</p>
-					
+
 				</div>
 			</div>
 
@@ -35,7 +43,7 @@
 				<div class="carousel-caption top-0 mt-5">
 					<p class="text-uppercase fs-3 mt-5 fw-bolder my-text-color">Apoyo al cliente ante cualquier situación</p>
 					<p class="display-1 fw-bolder ">Atención 24/7</p>
-					
+
 				</div>
 			</div>
 

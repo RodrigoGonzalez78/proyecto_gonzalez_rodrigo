@@ -29,13 +29,29 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+
+
 $routes->get('/', 'Home::index');
 $routes->get('/contact', 'Home::contact');
 $routes->get('/about', 'Home::about');
-$routes->get('/products', 'Home::products');
 $routes->get('/termsanduses', 'Home::termsanduses');
-$routes->get('/login', 'Home::login');
-$routes->get('/signup', 'Home::signup');
+
+
+
+//Registro de usuario
+$routes->get('/signup', 'SignUpController::create');
+$routes->post('/register-user', 'SignUpController::formValidation');
+
+//Login de usuario
+$routes->get('/login', 'LoginController::index');
+$routes->post('/login-user', 'LoginController::login');
+$routes->get('/login-out', 'LoginController::logout');
+
+//Productos
+$routes->get('/products', 'ProductController::index');
+$routes->get('/new-product', 'ProductController::createProduct');
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

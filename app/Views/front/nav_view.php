@@ -12,6 +12,7 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
                     <li class="nav-item m-1">
@@ -27,16 +28,43 @@
                     <li class="nav-item m-1">
                         <a class="my-navbar-link" aria-current="page" href="<?php echo base_url("/about") ?>">About</a>
                     </li>
+
+
+                    <?php if (session()->get('access') == 1) {
+
+                    ?>
                     <li class="nav-item m-1">
-                        <a href="<?php echo base_url("/login") ?>"><button type="button" class="btn my-btn-outline-primary  fw-bold">Login</button></a>
-                        
+                        <a class="my-navbar-link" aria-current="page" href="<?php echo base_url("/users") ?>">Usuarios</a>
                     </li>
+                    
+                        <li class="nav-item  m-1">
+                            <a href="<?php echo base_url("/login-out") ?>"><button type="button" class="btn btn-danger  fw-bold">Logout</button></a>
+                        </li>
 
-                    <li class="nav-item  m-1">
-                        <a href="<?php echo base_url("/signup") ?>"><button type="button" class="btn my-btn-primary  fw-bold"  >Sign-up</button></a>
-                    </li>
+                    <?php
+
+                    } elseif (session()->get('access') == 2) {
+                    ?>
+
+                        <li class="nav-item m-1">
+                            <a class="my-navbar-link" aria-current="page" href="<?php echo base_url("/contact") ?>">Carrito</a>
+                        </li>
+                        <li class="nav-item  m-1">
+                            <a href="<?php echo base_url("/login-out") ?>"><button type="button" class="btn btn-danger  fw-bold">Logout</button></a>
+                        </li>
+                    <?php
+                    } else {
+                    ?>
+                        <li class="nav-item m-1">
+                            <a href="<?php echo base_url("/login") ?>"><button type="button" class="btn my-btn-outline-primary  fw-bold">Login</button></a>
+                        </li>
+
+                        <li class="nav-item  m-1">
+                            <a href="<?php echo base_url("/signup") ?>"><button type="button" class="btn my-btn-primary  fw-bold">Sign-up</button></a>
+                        </li>
+                    <?php
+                    } ?>
                 </ul>
-
 
             </div>
         </div>

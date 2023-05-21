@@ -36,7 +36,7 @@
       <h2 class="featurette-heading fw-bold lh-1">Trayectoria. <span class=" my-text-color ">Y una gran historia.</span></h2>
       <p class=" lead text-justify">MountainTech fue fundada en el año 2005 por un grupo de amigos apasionados por la tecnología y los videojuegos. Lo que comenzó como un pequeño proyecto en el sótano de uno de ellos, se convirtió en una empresa próspera con una amplia variedad de componentes de hardware disponibles en su catálogo.
 
-En la actualidad, MountainTech cuenta con una amplia base de clientes leales y satisfechos, y se ha expandido para servir a clientes en todo el mundo.</p>
+        En la actualidad, MountainTech cuenta con una amplia base de clientes leales y satisfechos, y se ha expandido para servir a clientes en todo el mundo.</p>
     </div>
 
     <div class="col-md-5 order-md-1">
