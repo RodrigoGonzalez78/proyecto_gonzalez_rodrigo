@@ -33,7 +33,7 @@
 
                         <div class="mb-3">
                             <div class="mb-2 w-100">
-                                <label class="text-muted" for="password">Contaseña</label>
+                                <label class="text-muted" for="password">Contraseña</label>
                             </div>
                             <input id="password" type="password" class="form-control" name="password" required>
                         </div>

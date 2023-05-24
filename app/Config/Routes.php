@@ -47,9 +47,13 @@ $routes->get('/login', 'LoginController::index');
 $routes->post('/login-user', 'LoginController::login');
 $routes->get('/login-out', 'LoginController::logout');
 
+//Usuarios
+$routes->get('/users', 'UserController::index');
+
 //Productos
 $routes->get('/products', 'ProductController::index');
-$routes->get('/new-product', 'ProductController::createProduct');
+$routes->get('/new-product', 'ProductController::newProduct');
+$routes->post('/store-product', 'ProductController::storeProduct');
 
 
 /*

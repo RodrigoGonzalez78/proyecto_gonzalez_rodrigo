@@ -43,10 +43,10 @@ class SignUpController extends Controller
             $data['titulo'] = 'Sign-Up';
             echo view('front/head_view', $data);
             echo view('front/nav_view');
-
             echo view('back/users/sign_up', ['validation' => $this->validator]);
-
             echo view('front/footer_view');
+
+            
         } else {
 
 
