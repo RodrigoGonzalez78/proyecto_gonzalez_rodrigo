@@ -18,8 +18,12 @@
                     <td><?php echo $user['last_name']; ?></td>
                     <td><?php echo $user['email']; ?></td>
                     <td>
-                        <button>Editar</button>
-                        <button>Editar</button>
+                        <button class="btn my-btn-primary">
+                            <img src="assets/img/icons/edit.svg" alt=""  height="60%" width="60%">
+                        </button>
+                        <button class="btn btn-danger">
+                            <img src="assets/img/icons/delete.svg" alt="" height="60%" width="60%" >
+                        </button>
                     </td>
 
                 </tr>

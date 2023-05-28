@@ -46,7 +46,7 @@ class LoginController extends Controller
 
 
         // Redirigir al usuario a la página de inicio o a otra página deseada
-        return redirect()->to('/')->with('success', 'Inicio de sesión exitoso. '. $user['name'] . '!');
+        return redirect()->to('/')->with('success', 'Inicio de sesión exitoso. Bienvenido '. $user['name'] . '!');
       }
     }
 

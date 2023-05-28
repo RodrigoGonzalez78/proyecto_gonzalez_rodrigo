@@ -2,9 +2,11 @@
     <div class="card h-100 text-center p-1">
         <img src="<?php echo base_url('assets/uploads/' . $product['image']); ?>" class="card-img-top" alt="Imagen del producto">
         <div class="card-body">
+
             <h4 class="card-title"><?php echo ($product['name']); ?></h4>
             <h5 class="fw-bold">Precio: <span class="my-text-color"><?php echo ($product['price']); ?></span></h5>
             <h5 class="fw-bold">Stock: <span class="my-text-color"><?php echo ($product['stock']); ?></span></h5>
+            
             <div class="input-group input-group-sm mb-3">
                 <span class="input-group-text">Cantidad</span>
                 <input type="number w-30" class="form-control form-control-sm" value="1" max="<?php echo ($product['stock']); ?>" >
@@ -17,8 +19,7 @@
                     if (session()->get('access') == 1) {
                     ?>
                         <div class="col-6">
-
-                            <button type="button" class="btn my-btn-primary">Editar</button>
+                        <a href="<?php echo base_url('/edit-product?id='.$product['id']) ?>"><button type="button" class="btn my-btn-primary">Editar</button></a>
                         </div>
 
                         <div class="col-6">
@@ -30,7 +31,7 @@
                     ?>
                         <div class="col-6">
                             <!-- Button trigger modal -->
-                            <button type="button" class="btn my-btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">Ampliar</button>
+                            <button type="button" class="btn my-btn-primary" data-bs-toggle="modal" data-bs-target="<?php echo ("#modal".$product['id']); ?>">Ampliar</button>
                         </div>
 
                         <div class="col-6">
@@ -44,11 +45,12 @@
                 </div>
             </div>
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+            <!-- exampleModal1 -->
+            <div class="modal fade" id="<?php echo ("modal".$product['id']); ?>" tabindex="-1" aria-labelledby="<?php echo ("modalLabel".$product['id']); ?>" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel1"><?php echo ($product['name']); ?></h5>
+                            <h5 class="modal-title" id="<?php echo ("modalLabel".$product['id']); ?>"><?php echo ($product['name']); ?></h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body text-start">

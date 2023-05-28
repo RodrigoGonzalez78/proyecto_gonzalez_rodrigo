@@ -55,6 +55,8 @@ $routes->get('/products', 'ProductController::index');
 $routes->get('/new-product', 'ProductController::newProduct');
 $routes->post('/store-product', 'ProductController::storeProduct');
 
+$routes->get('/edit-product', 'ProductController::editProduct');
+$routes->post('/update-product', 'ProductController::updateProduct');
 
 /*
  * --------------------------------------------------------------------

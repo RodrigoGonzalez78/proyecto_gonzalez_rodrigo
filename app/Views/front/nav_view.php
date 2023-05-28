@@ -38,7 +38,9 @@
                     </li>
                     
                         <li class="nav-item  m-1">
-                            <a href="<?php echo base_url("/login-out") ?>"><button type="button" class="btn btn-danger  fw-bold">Logout</button></a>
+                            <a href="<?php echo base_url("/login-out") ?>"><button type="button" class="btn btn-danger  fw-bold">
+                            <img src="assets/img/icons/logout.svg" alt="" height="20%" width="20%" >    
+                            Logout</button></a>
                         </li>
 
                     <?php
