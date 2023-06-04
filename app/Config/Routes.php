@@ -30,7 +30,6 @@ $routes->set404Override();
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 
-
 $routes->get('/', 'Home::index');
 $routes->get('/contact', 'Home::contact');
 $routes->get('/about', 'Home::about');
@@ -47,16 +46,36 @@ $routes->get('/login', 'LoginController::index');
 $routes->post('/login-user', 'LoginController::login');
 $routes->get('/login-out', 'LoginController::logout');
 
-//Usuarios
+//Crud Usuarios
 $routes->get('/users', 'UserController::index');
+$routes->get('/edit-user', 'UserController::editUser');
 
-//Productos
+$routes->post('/update-user', 'UserController::updateUser');
+
+$routes->get('/disable-user', 'UserController::disableUser');
+$routes->get('/enable-user', 'UserController::enableUser');
+
+//Crud Productos
 $routes->get('/products', 'ProductController::index');
 $routes->get('/new-product', 'ProductController::newProduct');
 $routes->post('/store-product', 'ProductController::storeProduct');
 
 $routes->get('/edit-product', 'ProductController::editProduct');
 $routes->post('/update-product', 'ProductController::updateProduct');
+
+$routes->get('/disable-product', 'ProductController::disableProduct');
+$routes->get('/enable-product', 'ProductController::enableProduct');
+
+$routes->get('/disableds-products', 'ProductController::disabledProducts');
+$routes->post('/filter-products', 'ProductController::filterProducts');
+
+
+
+//Carrito
+$routes->get('/cart-list', 'CartController::index');
+$routes->get('/add-cart', 'CartController::addCartProduct');
+$routes->get('/clear-cart', 'CartController::clearCartProducts');
+$routes->get('/sum-cart-element', 'CartController::addCountProductCart');
 
 /*
  * --------------------------------------------------------------------

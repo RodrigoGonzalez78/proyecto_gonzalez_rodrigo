@@ -6,7 +6,7 @@ use App\Models\Product;
 use App\Models\Categorie;
 use CodeIgniter\Controller;
 
-class ProductController extends Controller
+class ProductController extends BaseController
 {
 
 
@@ -18,12 +18,28 @@ class ProductController extends Controller
     public function index()
     {
 
-        $data['products'] = Product::getProducts();
+        $data['categories'] = Categorie::getCategories();
+        $data['products'] = Product::getEnabledProducts();
         $data['titulo'] = 'Productos';
 
+        
         echo view('front/head_view', $data);
         echo view('front/nav_view');
         echo view('back/products/products', $data);
+        echo view('front/footer_view');
+    }
+
+
+
+    public function disabledProducts()
+    {
+
+        $data['products'] = Product::getDisabledProducts();
+        $data['titulo'] = 'Productos desactivados';
+
+        echo view('front/head_view', $data);
+        echo view('front/nav_view');
+        echo view('back/products/disabled_products', $data);
         echo view('front/footer_view');
     }
 
@@ -50,6 +66,25 @@ class ProductController extends Controller
         echo view('front/head_view', $data);
         echo view('front/nav_view');
         echo view('back/products/edit_product', $data);
+        echo view('front/footer_view');
+    }
+
+    public function filterProducts()
+    {
+
+        $data['categories'] = Categorie::getCategories();
+
+        $searchWord = $this->request->getVar('search');
+        $id_categorie = $this->request->getVar('id_categorie');
+
+        $data['products'] = Product::searchProducts($searchWord, $id_categorie);
+
+
+        $data['titulo'] = 'Productos';
+
+        echo view('front/head_view', $data);
+        echo view('front/nav_view');
+        echo view('back/products/products', $data);
         echo view('front/footer_view');
     }
 
@@ -109,7 +144,7 @@ class ProductController extends Controller
             'stock' => 'required',
             'description' => 'required',
             'id_categorie' => 'is_not_unique[categories.id]',
-            //'image' => 'ext_in[image,jpg,png]'
+            'image' => 'ext_in[image,jpg,png]'
 
         ]);
 
@@ -134,8 +169,8 @@ class ProductController extends Controller
                 'id_categorie' => $this->request->getVar('id_categorie')
             ];
 
-            
-            if (!empty($image)) {
+
+            if ($image->isValid()) {
                 $alet_name = $image->getRandomName();
                 $image->move(ROOTPATH . 'assets/uploads', $alet_name);
 
@@ -146,5 +181,27 @@ class ProductController extends Controller
             Product::updateProduct($id, $data);
             return redirect()->to('/products')->with('success', 'Producto actualisado  con exito!');
         }
+    }
+
+
+    public function disableProduct()
+    {
+        $data = [
+            'down' => 'SI'
+        ];
+        $id = intval($this->request->getVar('id'));
+        Product::updateProduct($id, $data);
+        return redirect()->to('/products')->with('success', 'Producto desactivado  con exito!');
+    }
+
+
+    public function enableProduct()
+    {
+        $data = [
+            'down' => 'NO'
+        ];
+        $id = intval($this->request->getVar('id'));
+        Product::updateProduct($id, $data);
+        return redirect()->to('/disableds-products')->with('success', 'Producto activado con exito!');
     }
 }

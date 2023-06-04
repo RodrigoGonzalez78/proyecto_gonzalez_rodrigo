@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Models\User;
 use CodeIgniter\Controller;
 
-class SignUpController extends Controller
+class SignUpController extends BaseController
 {
 
     public function __construct()

@@ -5,7 +5,7 @@ namespace App\Controllers;
 use App\Models\User;
 use CodeIgniter\Controller;
 
-class LoginController extends Controller
+class LoginController extends BaseController
 {
   public function index()
   {
@@ -38,7 +38,7 @@ class LoginController extends Controller
           'name' => $user['name'],
           'last_name' => $user['last_name'],
           'email' => $user['email'],
-          'access' => $user['access'],
+          'id_profile' => $user['id_profile'],
           'logged_in'=> TRUE
         ];
 

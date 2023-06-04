@@ -22,6 +22,46 @@ class Product extends Model
         return $product->findAll();
     }
 
+
+    public static function getDisabledProducts(){
+        $product = new Product();
+        $builder = $product->db->table($product->table);
+        $builder->where('down', 'SI');
+
+        $query = $builder->get();
+        $products = $query->getResultArray();
+
+        return $products;
+    }
+
+    public static function getEnabledProducts(){
+        $product = new Product();
+        $builder = $product->db->table($product->table);
+        $builder->where('down', 'NO');
+
+        $query = $builder->get();
+        $products = $query->getResultArray();
+
+        return $products;
+    }
+
+    public static function searchProducts($searchTerm, $category = 'Todos') {
+        $product = new Product();
+        $builder = $product->db->table($product->table);
+        
+        $builder->like('name', $searchTerm);
+        
+        if ($category != 'Todos') {
+            $builder->where('id_categorie', $category);
+        }
+        $builder->where('down', 'NO');
+        
+        $query = $builder->get();
+        $products = $query->getResultArray();
+        
+        return $products;
+    }
+
     public  static function updateProduct($id, $data)
     {
         $product = new Product();

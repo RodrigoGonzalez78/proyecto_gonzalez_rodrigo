@@ -85,7 +85,7 @@
 
 
                         <div class="mb-3">
-                            <p>Imagen actual</p>
+                            <p>Imagen Original</p>
                             <?php if (!empty($product['image'])) { ?>
 
                                 <img src="<?php echo base_url('assets/uploads/' . $product['image']); ?>" class="img-thumbnail" height="50%" width="50%" alt="Imagen actual del producto">

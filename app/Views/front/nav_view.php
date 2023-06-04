@@ -30,7 +30,7 @@
                     </li>
 
 
-                    <?php if (session()->get('access') == 1) {
+                    <?php if (session()->get('id_profile') == 1) {
 
                     ?>
                     <li class="nav-item m-1">
@@ -45,11 +45,11 @@
 
                     <?php
 
-                    } elseif (session()->get('access') == 2) {
+                    } elseif (session()->get('id_profile') == 2) {
                     ?>
 
                         <li class="nav-item m-1">
-                            <a class="my-navbar-link" aria-current="page" href="<?php echo base_url("/contact") ?>">Carrito</a>
+                            <a class="my-navbar-link" aria-current="page" href="<?php echo base_url("/cart-list") ?>">Carrito</a>
                         </li>
                         <li class="nav-item  m-1">
                             <a href="<?php echo base_url("/login-out") ?>"><button type="button" class="btn btn-danger  fw-bold">Logout</button></a>
