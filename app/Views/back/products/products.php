@@ -60,11 +60,11 @@
     ?>
 
 
-        <div class="col-1 ms-auto">
+        <div class="col-auto ms-auto">
             <a href="<?php echo base_url("/new-product") ?>" class="text-dark"><button type="button" class="btn my-btn-primary fw-bold">Agregar</button></a>
 
         </div>
-        <div class="col-1">
+        <div class="col-auto">
             <a href="<?php echo base_url("/disableds-products") ?>"><button type="button" class="btn my-btn-primary fw-bold">Inactivos</button></a>
 
         </div>

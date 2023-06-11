@@ -4,9 +4,8 @@ namespace App\Controllers;
 
 use App\Models\Profile;
 use App\Models\User;
-use CodeIgniter\Controller;
 
-class UserController extends Controller
+class UserController extends BaseController
 {
   public function __construct()
   {

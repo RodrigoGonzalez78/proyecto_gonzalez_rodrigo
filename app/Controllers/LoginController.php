@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 use App\Models\User;
-use CodeIgniter\Controller;
 
 class LoginController extends BaseController
 {
@@ -29,6 +28,13 @@ class LoginController extends BaseController
     $user = $userModel->where('email', $email)->first();
 
     if ($user) {
+
+
+      if($user['down']=='SI'){
+        return redirect()->to('/login')->with('error', 'Usuario desactivado');
+      }
+
+
       // Verificar la contraseña
       if (password_verify($password, $user['password'])) {
 

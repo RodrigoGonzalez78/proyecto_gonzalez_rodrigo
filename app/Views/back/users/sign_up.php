@@ -21,9 +21,9 @@
 
                         <div class="mb-2">
                             <label for="name" class="form-label">Nombre</label>
-                            <!-- ingreso sel nombre-->
+                            
                             <input name="name" type="text" class="form-control" value="<?php echo set_value('name') ?>" placeholder="Nombre">
-                            <!-- Error -->
+                            
                             <?php if ($validation->getError('name')) { ?>
                                 <div class='alert alert-danger mt-2'>
                                     <?= $error = $validation->getError('name'); ?>

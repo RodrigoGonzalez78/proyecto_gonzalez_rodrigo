@@ -65,7 +65,9 @@
                        
 
                         <div class="d-flex align-items-center">
-                            <input type="reset" value="Cancelar" class="btn btn-danger fw-bold">
+                        <div class="col-1">
+                                <a href="<?php echo base_url("/users") ?>"><button type="button" class="btn btn-danger">Cancelar</button></a>
+                            </div>
                             <input type="submit" value="Actualisar" class="btn my-btn-primary ms-auto fw-bold">
 
                         </div>

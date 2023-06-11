@@ -5,7 +5,7 @@
    width="48"
    version="1.1"
    id="svg4"
-   sodipodi:docname="remove.svg"
+   sodipodi:docname="done.svg"
    inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -32,7 +32,7 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="svg4" />
   <path
-     d="M200-450v-60h560v60H200Z"
+     d="M294-242 70-466l43-43 181 181 43 43-43 43Zm170 0L240-466l43-43 181 181 384-384 43 43-427 427Zm0-170-43-43 257-257 43 43-257 257Z"
      id="path2"
      style="fill:#ffffff" />
 </svg>

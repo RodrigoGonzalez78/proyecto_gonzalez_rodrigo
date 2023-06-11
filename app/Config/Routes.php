@@ -31,13 +31,14 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 
 $routes->get('/', 'Home::index');
-$routes->get('/contact', 'Home::contact');
 $routes->get('/about', 'Home::about');
 $routes->get('/termsanduses', 'Home::termsanduses');
 
 
 
-//Registro de usuario
+/*
+Registro de usuarios
+*/
 $routes->get('/signup', 'SignUpController::create');
 $routes->post('/register-user', 'SignUpController::formValidation');
 
@@ -47,36 +48,51 @@ $routes->post('/login-user', 'LoginController::login');
 $routes->get('/login-out', 'LoginController::logout');
 
 //Crud Usuarios
-$routes->get('/users', 'UserController::index');
-$routes->get('/edit-user', 'UserController::editUser');
+$routes->get('/users', 'UserController::index',['filter'=> 'authAdmin']);
+$routes->get('/edit-user', 'UserController::editUser',['filter'=> 'authAdmin']);
 
-$routes->post('/update-user', 'UserController::updateUser');
+$routes->post('/update-user', 'UserController::updateUser',['filter'=> 'authAdmin']);
 
-$routes->get('/disable-user', 'UserController::disableUser');
-$routes->get('/enable-user', 'UserController::enableUser');
+$routes->get('/disable-user', 'UserController::disableUser',['filter'=> 'authAdmin']);
+$routes->get('/enable-user', 'UserController::enableUser',['filter'=> 'authAdmin']);
 
 //Crud Productos
 $routes->get('/products', 'ProductController::index');
-$routes->get('/new-product', 'ProductController::newProduct');
-$routes->post('/store-product', 'ProductController::storeProduct');
+$routes->get('/new-product', 'ProductController::newProduct',['filter'=> 'authAdmin']);
+$routes->post('/store-product', 'ProductController::storeProduct',['filter'=> 'authAdmin']);
 
-$routes->get('/edit-product', 'ProductController::editProduct');
-$routes->post('/update-product', 'ProductController::updateProduct');
+$routes->get('/edit-product', 'ProductController::editProduct',['filter'=> 'authAdmin']);
+$routes->post('/update-product', 'ProductController::updateProduct',['filter'=> 'authAdmin']);
 
-$routes->get('/disable-product', 'ProductController::disableProduct');
-$routes->get('/enable-product', 'ProductController::enableProduct');
+$routes->get('/disable-product', 'ProductController::disableProduct',['filter'=> 'authAdmin']);
+$routes->get('/enable-product', 'ProductController::enableProduct',['filter'=> 'authAdmin']);
 
-$routes->get('/disableds-products', 'ProductController::disabledProducts');
+$routes->get('/disableds-products', 'ProductController::disabledProducts',['filter'=> 'authAdmin']);
 $routes->post('/filter-products', 'ProductController::filterProducts');
 
 
 
 //Carrito
 $routes->get('/cart-list', 'CartController::index');
-$routes->get('/add-cart', 'CartController::addCartProduct');
-$routes->get('/clear-cart', 'CartController::clearCartProducts');
-$routes->get('/sum-cart-element', 'CartController::addCountProductCart');
+$routes->get('/add-cart', 'CartController::addCartProduct',['filter'=> 'auth']);
+$routes->get('/clear-cart', 'CartController::clearCartProducts',['filter'=> 'auth']);
 
+$routes->get('/sum-cart-element', 'CartController::addCountProductCart',['filter'=> 'auth']);
+$routes->get('/rest-cart-element', 'CartController::restCountProductCart',['filter'=> 'auth']);
+
+$routes->get('/remove-cart-element', 'CartController::removeProductCart',['filter'=> 'auth']);
+
+$routes->get('/create-sale', 'CartController::createSale',['filter'=> 'auth']);
+
+//Consultas
+$routes->get('/contact', 'ConsultsController::index');
+$routes->post('/create-consult', 'ConsultsController::createConsult');
+$routes->get('/list-consults', 'ConsultsController::consultsList',['filter'=> 'authAdmin']);
+
+$routes->get('/archived-list-consults', 'ConsultsController::archivedConsultsList',['filter'=> 'authAdmin']);
+
+$routes->get('/archive-consult', 'ConsultsController::archiveConsult',['filter'=> 'authAdmin']);
+$routes->get('/attended-consults', 'ConsultsController::attendedConsult',['filter'=> 'authAdmin']);
 /*
  * --------------------------------------------------------------------
  * Additional Routing

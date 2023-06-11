@@ -14,15 +14,6 @@ class Home extends BaseController
         echo view('front/footer_view');
     }
 
-    public function contact()
-    {
-
-        $data['titulo'] = 'Contacto';
-        echo view('front/head_view', $data);
-        echo view('front/nav_view');
-        echo view('front/contact');
-        echo view('front/footer_view');
-    }
 
     public function about()
     {

@@ -8,8 +8,11 @@
     ?>
 </div>
 
+<div class="container m-4">
+    <h4>Lista de usuarios</h4>
+</div>
 
-<div class="container ms-auto mt-2">
+<div class="container ms-auto ">
 
     <table class="table">
         <thead class="table-dark">
@@ -19,6 +22,8 @@
                 <th>Apellido</th>
                 <th>Email</th>
                 <th>Desactivado</th>
+                <th>Admin</th>
+                <td></td>
                 <th></th>
 
 
@@ -33,17 +38,25 @@
                     <td><?php echo $user['email']; ?></td>
                     <td><?php echo $user['down']; ?></td>
                     <td>
-                        <a href="<?php echo base_url("/edit-user?id=" . $user['id']) ?>">
-                            <button class="btn my-btn-primary">
-                                <img src="assets/img/icons/edit.svg" alt="" height="60%" width="60%">
-                            </button>
-                        </a>
+                        <?php
+                        if ($user['id_profile'] == '1') {
+                        ?>
+                            SI
+                        <?php
+                        } else {
+                        ?>
+                            NO
+                        <?php
+                        }
+                        ?>
+                    </td>
+                    <td>
                         <?php
                         if ($user['down'] == 'SI') {
                         ?>
                             <a href="<?php echo base_url("/enable-user?id=" . $user['id']) ?>">
-                                <button class="btn btn-danger">
-                                    <img src="assets/img/icons/delete.svg" alt="" height="60%" width="60%">
+                                <button class="btn my-btn-primary">
+                                    Activar
                                 </button>
                             </a>
                         <?php
@@ -51,12 +64,19 @@
                         ?>
                             <a href="<?php echo base_url("/disable-user?id=" . $user['id']) ?>">
                                 <button class="btn btn-danger">
-                                    <img src="assets/img/icons/delete.svg" alt="" height="60%" width="60%">
+                                    Desactivar
                                 </button>
                             </a>
                         <?php
                         }
                         ?>
+                    </td>
+                    <td>
+                        <a href="<?php echo base_url("/edit-user?id=" . $user['id']) ?>">
+                            <button class="btn my-btn-primary">
+                                <img src="assets/img/icons/edit.svg" alt="" height="50%" width="50%">
+                            </button>
+                        </a>
 
                     </td>
 

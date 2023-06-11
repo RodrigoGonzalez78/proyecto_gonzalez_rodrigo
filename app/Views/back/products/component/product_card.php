@@ -48,17 +48,28 @@
                 } else {
                     ?>
                     <div class="col-6">
-                        <!-- Button trigger modal -->
                         <button type="button" class="btn my-btn-primary" data-bs-toggle="modal" data-bs-target="<?php echo ("#modal" . $product['id']); ?>">Ampliar</button>
                     </div>
 
-                    <div class="col-6">
-                        <a href="<?php echo base_url('/add-cart?id=' . $product['id']); ?>">
-                            <button type="button" class="btn btn-danger">Comprar</button>
-                        </a>
+                    
+                    <?php
 
-                    </div>
+                    if ($product['stock'] <= 0) {
+                    ?>
+                        <div class="col-6">
+                            <button type="button" class="btn  btn-secondary">Comprar</button>
+                        </div>
+                    <?php
+                    } else {
+                    ?>
+                        <div class="col-6">
+                            <a href="<?php echo base_url('/add-cart?id=' . $product['id']); ?>">
+                                <button type="button" class="btn btn-danger">Comprar</button>
+                            </a>
+
+                        </div>
                 <?php
+                    }
                 }
                 ?>
 

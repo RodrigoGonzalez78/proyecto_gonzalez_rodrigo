@@ -33,14 +33,21 @@
                     <?php if (session()->get('id_profile') == 1) {
 
                     ?>
-                    <li class="nav-item m-1">
-                        <a class="my-navbar-link" aria-current="page" href="<?php echo base_url("/users") ?>">Usuarios</a>
-                    </li>
-                    
+                        <li class="nav-item m-1">
+                            <a class="my-navbar-link" aria-current="page" href="<?php echo base_url("/users") ?>">Usuarios</a>
+                        </li>
+
+                        <li class="nav-item m-1">
+                            <a class="my-navbar-link" aria-current="page" href="<?php echo base_url("/list-consults") ?>">Consultas</a>
+                        </li>
+
+                        <li class="nav-item m-1">
+                            <a class="my-navbar-link" aria-current="page" href="<?php echo base_url("/users") ?>">Pedidos</a>
+                        </li>
                         <li class="nav-item  m-1">
                             <a href="<?php echo base_url("/login-out") ?>"><button type="button" class="btn btn-danger  fw-bold">
-                            <img src="assets/img/icons/logout.svg" alt="" height="20%" width="20%" >    
-                            Logout</button></a>
+                                    <img src="assets/img/icons/logout.svg" alt="" height="20%" width="20%">
+                                    Logout</button></a>
                         </li>
 
                     <?php
@@ -48,11 +55,31 @@
                     } elseif (session()->get('id_profile') == 2) {
                     ?>
 
+
+
+
                         <li class="nav-item m-1">
-                            <a class="my-navbar-link" aria-current="page" href="<?php echo base_url("/cart-list") ?>">Carrito</a>
+                            <a class="my-navbar-link" aria-current="page" href="<?php echo base_url("/") ?>">Mis Pedidos</a>
                         </li>
+                        <li class="nav-item m-1">
+                        
+                            <a class="my-navbar-link" aria-current="page" href="<?php echo base_url("/cart-list") ?>">
+                            
+                            <img src="assets/img/icons/cart.svg" alt="" height="25px" width="25px">
+                            Carrito
+                        </a>
+                        </li>
+                        <li class="nav-item m-1">
+                            <a class="my-navbar-link" aria-current="page" href="<?php echo base_url("/") ?>">
+                                <img src="assets/img/icons/account.svg" alt="" height="25px" width="25px">
+                                Mis Datos
+                            </a>
+                        </li>
+
                         <li class="nav-item  m-1">
-                            <a href="<?php echo base_url("/login-out") ?>"><button type="button" class="btn btn-danger  fw-bold">Logout</button></a>
+                            <a href="<?php echo base_url("/login-out") ?>"><button type="button" class="btn btn-danger  fw-bold">
+                                    <img src="assets/img/icons/logout.svg" alt="" height="25px" width="25px">
+                                    Logout</button></a>
                         </li>
                     <?php
                     } else {
