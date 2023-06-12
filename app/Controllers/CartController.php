@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Models\Product;
 use App\Models\Sale;
 use App\Models\SaleDetails;
+use App\Models\User;
 use CodeIgniterCart\Cart;
 
 class CartController extends BaseController
@@ -108,13 +109,17 @@ class CartController extends BaseController
 
     public function createSale()
     {
+        $user= User::getUser(session()->user_id);
+        if($user['id_address']==null){
+            return redirect()->to('/user-profile')->with('error', 'Por favor actualise su dirección primero.');
+        }
         $cart = \Config\Services::cart();
 
         $products = $cart->contents();
         $totalamount = 0;
 
         foreach ($products as $product) {
-            $totalamount = $product['qty'] * $product['price'];
+            $totalamount += $product['qty'] * $product['price'];
         }
 
         $sale = new Sale();

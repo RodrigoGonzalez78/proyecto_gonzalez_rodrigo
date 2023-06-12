@@ -42,7 +42,6 @@ class UserController extends BaseController
       'name'   => 'required|min_length[3]',
       'last_name' => 'required|min_length[3]|max_length[25]',
       'email'    => 'required|min_length[4]|max_length[100]|valid_email',
-      //|is_unique[users.email]
       'id_profile' => 'is_not_unique[profile.id]',
     ]);
 
@@ -90,4 +89,18 @@ class UserController extends BaseController
     User::updateUser($id, $data);
     return redirect()->to('/users')->with('success', 'Usuario desactivado con exito!');
   }
+
+  //Blanqueo de contraseña
+  public function passwordBleaching()
+  {
+    $id = intval($this->request->getVar('id'));
+    User::updateUser($id, [
+
+      'password' => password_hash('12345678', PASSWORD_DEFAULT)
+      //  password_hash() crea un nuevo hash de contraseña usando un algoritmo de hash de único sentido.
+    ]);
+    return redirect()->to('/users')->with('success', 'Contraseña Blanqueada(1245678)!');
+  }
+
+  
 }

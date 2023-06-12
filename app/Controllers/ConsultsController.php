@@ -69,8 +69,10 @@ class ConsultsController extends BaseController
     }
 
     public function archivedConsultsList(){
-        $data['titulo'] = 'Cosultas';
+        
+        $data['titulo'] = 'Cosultas Archivadas';
         $data['consults']=Consult::getAllArchivedConsults();
+
         echo view('front/head_view', $data);
         echo view('front/nav_view');
         echo view('back/consults/archived_consult_list',$data);

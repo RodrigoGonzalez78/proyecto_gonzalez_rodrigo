@@ -53,7 +53,7 @@
 
                         <div class="mb-3">
                             <label for="password" class="form-label">Contraseña</label>
-                            <input name="password" type="password" class="form-control" placeholder="Contraseña (mínimo 5 caracteres)">
+                            <input name="password" type="password" class="form-control" placeholder="Contraseña (mínimo 8 caracteres)">
                             <!-- Error -->
                             <?php if ($validation->getError('password')) { ?>
                                 <div class='alert alert-danger mt-2'>

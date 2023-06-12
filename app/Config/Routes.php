@@ -56,6 +56,12 @@ $routes->post('/update-user', 'UserController::updateUser',['filter'=> 'authAdmi
 $routes->get('/disable-user', 'UserController::disableUser',['filter'=> 'authAdmin']);
 $routes->get('/enable-user', 'UserController::enableUser',['filter'=> 'authAdmin']);
 
+//Gestionar datos propios
+$routes->get('/user-profile', 'ProfileController::userProfile',['filter'=> 'auth']);
+$routes->post('/update-user-data', 'ProfileController::updateUser',['filter'=> 'auth']);
+$routes->post('/update-address', 'ProfileController::updateAddress',['filter'=> 'auth']);
+$routes->post('/update-password', 'ProfileController::updatePassword',['filter'=> 'auth']);
+
 //Crud Productos
 $routes->get('/products', 'ProductController::index');
 $routes->get('/new-product', 'ProductController::newProduct',['filter'=> 'authAdmin']);
@@ -93,6 +99,13 @@ $routes->get('/archived-list-consults', 'ConsultsController::archivedConsultsLis
 
 $routes->get('/archive-consult', 'ConsultsController::archiveConsult',['filter'=> 'authAdmin']);
 $routes->get('/attended-consults', 'ConsultsController::attendedConsult',['filter'=> 'authAdmin']);
+
+
+//Pedidos
+$routes->get('/list-sales', 'SalesController::index',['filter'=> 'authAdmin']);
+$routes->get('/list-sales-user', 'SalesController::userSales',['filter'=> 'auth']);
+$routes->get('/bill', 'SalesController::bill',['filter'=> 'auth']);
+$routes->get('/bill-dowload', 'SalesController::downloadBillPDF',['filter'=> 'auth']);
 /*
  * --------------------------------------------------------------------
  * Additional Routing

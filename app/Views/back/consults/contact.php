@@ -79,7 +79,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="description" class="form-label text-white fw-bold">Descripción</label>
+                        <label for="description" class="form-label text-white fw-bold">Mensaje</label>
                         <!-- ingreso sel nombre-->
                         <textarea name="description" class="form-control" rows="4"><?php echo set_value('description') ?></textarea>
                         <!-- Error -->
@@ -93,7 +93,7 @@
 
                     <div class="d-flex align-items-center">
                         <input type="reset" value="Limpiar" class="btn btn-danger fw-bold">
-                        <input type="submit" value="Guardar" class="btn my-btn-primary ms-auto fw-bold">
+                        <input type="submit" value="Enviar" class="btn my-btn-primary ms-auto fw-bold">
 
                     </div>
 
