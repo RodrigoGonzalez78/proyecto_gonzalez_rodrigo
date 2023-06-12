@@ -55,6 +55,7 @@ $routes->post('/update-user', 'UserController::updateUser',['filter'=> 'authAdmi
 
 $routes->get('/disable-user', 'UserController::disableUser',['filter'=> 'authAdmin']);
 $routes->get('/enable-user', 'UserController::enableUser',['filter'=> 'authAdmin']);
+$routes->get('/password-bleaching', 'UserController::passwordBleaching',['filter'=> 'authAdmin']);
 
 //Gestionar datos propios
 $routes->get('/user-profile', 'ProfileController::userProfile',['filter'=> 'auth']);

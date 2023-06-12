@@ -23,6 +23,7 @@
                 <th>Email</th>
                 <th>Desactivado</th>
                 <th>Admin</th>
+                <th>Contraseña</th>
                 <td></td>
                 <th></th>
 
@@ -37,6 +38,7 @@
                     <td><?php echo $user['last_name']; ?></td>
                     <td><?php echo $user['email']; ?></td>
                     <td><?php echo $user['down']; ?></td>
+                    
                     <td>
                         <?php
                         if ($user['id_profile'] == '1') {
@@ -50,6 +52,12 @@
                         }
                         ?>
                     </td>
+                    <td> <a href="<?php echo base_url("/password-bleaching?id=" . $user['id']) ?>">
+                            <button class="btn btn-danger">
+                                <img src="assets/img/icons/restart.svg" alt="" height="25px" width="25px">
+                                Blanquear
+                            </button>
+                        </a></td>
                     <td>
                         <?php
                         if ($user['down'] == 'SI') {
@@ -74,7 +82,7 @@
                     <td>
                         <a href="<?php echo base_url("/edit-user?id=" . $user['id']) ?>">
                             <button class="btn my-btn-primary">
-                                <img src="assets/img/icons/edit.svg" alt="" height="50%" width="50%">
+                                <img src="assets/img/icons/edit.svg" alt="" height="25px" width="25px">
                             </button>
                         </a>
 

@@ -99,8 +99,6 @@ class UserController extends BaseController
       'password' => password_hash('12345678', PASSWORD_DEFAULT)
       //  password_hash() crea un nuevo hash de contraseña usando un algoritmo de hash de único sentido.
     ]);
-    return redirect()->to('/users')->with('success', 'Contraseña Blanqueada(1245678)!');
+    return redirect()->to('/users')->with('success', 'Contraseña Blanqueada(12345678)!');
   }
-
-  
 }

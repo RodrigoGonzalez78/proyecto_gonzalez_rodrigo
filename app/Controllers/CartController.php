@@ -59,15 +59,27 @@ class CartController extends BaseController
 
     public function addCountProductCart()
     {
-
         $cart = \Config\Services::cart();
         $rowid = $this->request->getVar('rowid');
         $count = $this->request->getVar('count');
 
-        $cart->update(array(
-            'rowid' => $rowid,
-            'qty' => $count + 1,
-        ));
+        // Obtener información del producto
+        $productInfo = Product::getProduct($cart->contents()[$rowid]['id']);
+
+
+        // Verificar disponibilidad en el stock
+        $availableStock = $productInfo['stock'];
+        $newCount = $count + 1;
+
+        if ($newCount <= $availableStock) {
+            $cart->update(array(
+                'rowid' => $rowid,
+                'qty' => $newCount,
+            ));
+        } else {
+            // Si la cantidad excede el stock disponible, muestra un mensaje de error o realiza alguna otra acción
+            return redirect()->to('/cart-list')->with('error', 'La cantidad solicitada supera el stock disponible.');
+        }
 
         return redirect()->to('/cart-list');
     }
@@ -109,8 +121,8 @@ class CartController extends BaseController
 
     public function createSale()
     {
-        $user= User::getUser(session()->user_id);
-        if($user['id_address']==null){
+        $user = User::getUser(session()->user_id);
+        if ($user['id_address'] == null) {
             return redirect()->to('/user-profile')->with('error', 'Por favor actualise su dirección primero.');
         }
         $cart = \Config\Services::cart();
@@ -142,7 +154,7 @@ class CartController extends BaseController
 
             $productModel->update($product['id'], ['stock' => $product['stock'] - $product['qty']]);
         }
-        
+
         $cart->destroy();
 
         return redirect()->to('/')->with('success', 'Compra exitosa');
