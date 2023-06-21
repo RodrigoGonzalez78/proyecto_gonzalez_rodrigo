@@ -14,6 +14,8 @@ class UserController extends BaseController
 
   public function index()
   {
+
+    
     $data['titulo'] = 'Usuarios';
     $userModel = new User();
     $data['users'] = $userModel->findAll();
@@ -61,6 +63,7 @@ class UserController extends BaseController
         'last_name' => $this->request->getVar('last_name'),
         'email' => $this->request->getVar('email'),
         'id_profile' => $this->request->getVar('id_profile')
+
       ];
       $id = intval($this->request->getVar('id'));
 

@@ -41,7 +41,7 @@ class ConsultsController extends BaseController
             $data['titulo'] = 'Contacto';
             echo view('front/head_view', $data);
             echo view('front/nav_view');
-            echo view('front/contact',['validation' => $this->validator]);
+            echo view('back/consults/contact',['validation' => $this->validator]);
             echo view('front/footer_view');
             
         } else {

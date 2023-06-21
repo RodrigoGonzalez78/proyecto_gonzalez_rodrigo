@@ -40,21 +40,58 @@ class CartController extends BaseController
     {
 
         $cart = \Config\Services::cart();
+
         $product = Product::getProduct($this->request->getVar('id'));
 
-        $cart->insert(array(
-            'id' => $product['id'],
-            'qty' => 1,
-            'price' => $product['price'],
-            'name' => $product['name'],
-            'image' => $product['image'],
-            'stock' => $product['stock'],
+        $stock = $product['stock'];
+        $contenido = $cart->contents();
+        $encontrado = false;
 
-        ));
+        foreach ($contenido as $item) {
+            //Encuento el producto si ya se agrego
+            if ($item['id'] == $product['id']) {
 
+                //Verifico stock
+                if ($item['qty'] + 1 <= $stock) {
 
-        return redirect()->to('/products')->with('success', 'Agregado al carrito! ');
+                    $cart->update(array(
+                        'rowid' => $item['rowid'],
+                        'qty' => $item['qty'] + 1,
+                    ));
+
+                    return redirect()->to('/products')->with('success', 'Agregado al carrito! ');
+                } else {
+                    //Muestra mensaje si superoel stcok disponible
+                    return redirect()->to('/cart-list')->with('error', 'La cantidad solicitada supera el stock disponible.');
+                }
+
+                //Bandera de encotrado el producto
+                $encontrado = true;
+            }
+        }
+
+        //Si no se existia fuciona normalmente
+        if (!$encontrado) {
+
+            if ($stock >= 1) {
+                $cart->insert(array(
+                    'id' => $product['id'],
+                    'qty' => 1,
+                    'price' => $product['price'],
+                    'name' => $product['name'],
+                    'image' => $product['image'],
+                    'stock' => $product['stock'],
+
+                ));
+
+                return redirect()->to('/products')->with('success', 'Agregado al carrito! ');
+            } else {
+                return redirect()->to('/cart-list')->with('error', 'Sin Stock!');
+            }
+        }
     }
+
+   
 
 
     public function addCountProductCart()
@@ -69,6 +106,7 @@ class CartController extends BaseController
 
         // Verificar disponibilidad en el stock
         $availableStock = $productInfo['stock'];
+
         $newCount = $count + 1;
 
         if ($newCount <= $availableStock) {
