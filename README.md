@@ -1,3 +1,20 @@
+# Ecomerce de Hardware
+
+Una aplicacion web con el objetivo de vender componentes de computadoras. Permite registrarse, iniciar seción, comprar , etc,
+
+## Capturas
+
+![Captura1](detalles_proyecto/captura%201.png)
+![Captura2](detalles_proyecto/captura%202.png)
+
+## Informe
+
+[Informe de requisitos](detalles_proyecto/Informe%20de%20Requisitos-RodrigoGonzalez.pdf)
+
+
+
+
+
 # CodeIgniter 4 Framework
 
 ## What is CodeIgniter?
