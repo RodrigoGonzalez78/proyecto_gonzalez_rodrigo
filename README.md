@@ -1,6 +1,6 @@
 # Ecomerce de Hardware
 
-Una aplicacion web con el objetivo de vender componentes de computadoras. Permite registrarse, iniciar seción, comprar , etc,
+Una aplicacion web con el objetivo de vender componentes de computadoras. Permite registrarse, iniciar sesión, comprar , etc,
 
 ## Capturas
 
